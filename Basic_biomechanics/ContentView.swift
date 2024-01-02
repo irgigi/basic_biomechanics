@@ -1,21 +1,33 @@
 //
 //  ContentView.swift
 //  Basic_biomechanics
-//
-//  Created by Мамуля on 01.01.2024.
-//
+
 
 import SwiftUI
 
 struct ContentView: View {
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        
+        TabView {
+            
+            InfoView()
+                .tabItem {
+                    Label("Info", systemImage: "figure")
+                }
+            
+            HelloView()
+                .tabItem {
+                    Label("Hello", systemImage: "globe")
+                }
+            
+            SettingsView()
+                .tabItem {
+                    Label("Settings", systemImage: "gear")
+                }
         }
-        .padding()
+        .navigationBarTitle("-")
+
     }
 }
 
