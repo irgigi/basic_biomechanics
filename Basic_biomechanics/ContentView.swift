@@ -7,11 +7,13 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @Binding var titleOn: Bool
+    
     var body: some View {
         
         TabView {
             
-            InfoView()
+            InfoView(titleOn: $titleOn)
                 .tabItem {
                     Label("Info", systemImage: "figure")
                 }
@@ -21,7 +23,7 @@ struct ContentView: View {
                     Label("Hello", systemImage: "globe")
                 }
             
-            SettingsView()
+            SettingsView(titleOn: $titleOn)
                 .tabItem {
                     Label("Settings", systemImage: "gear")
                 }
@@ -32,5 +34,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ContentView(titleOn: .constant(true))
 }

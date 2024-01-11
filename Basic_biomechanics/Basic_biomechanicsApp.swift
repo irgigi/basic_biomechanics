@@ -7,10 +7,12 @@ import SwiftUI
 
 @main
 struct Basic_biomechanicsApp: App {
+    
+    @AppStorage("titleOn") var titleOn: Bool = true
+    
     var body: some Scene {
         WindowGroup {
-            //InfoView()
-            ContentView()
+            ContentView(titleOn: $titleOn)
         }
     }
 }

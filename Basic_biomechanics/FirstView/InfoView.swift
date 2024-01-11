@@ -7,6 +7,7 @@ import SwiftUI
 
 struct InfoView: View {
     
+    @Binding var titleOn: Bool
     let model: [Post] = Post.make()
    
     var body: some View {
@@ -21,7 +22,7 @@ struct InfoView: View {
                     }
                     .listRowInsets(EdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20))
                 }
-                .navigationTitle("Плоскости и оси")
+                .navigationTitle(titleOn ? "Плоскости и оси" : "")
             }
             Image("axes")
                 .resizable()
@@ -36,5 +37,5 @@ struct InfoView: View {
 
 
 #Preview {
-    InfoView()
+    InfoView(titleOn: .constant(true))
 }

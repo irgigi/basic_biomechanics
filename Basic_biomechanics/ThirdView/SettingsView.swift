@@ -7,7 +7,10 @@ import SwiftUI
 
 struct SettingsView: View {
     
+    @Environment(\.colorScheme) var colorScheme
+    @State private var isDarkMode = false
     @State private var sliderValue = 50.0
+    @Binding var titleOn: Bool
     
     var body: some View {
         
@@ -15,8 +18,23 @@ struct SettingsView: View {
             
             Form {
                 
-                Section(header: Text("1 section")) {
-                    Toggle("toggle", isOn: .constant(true))
+                Section(header: Text("Theme")) {
+                    
+                    
+                    Toggle(isDarkMode ? "Dark Theme enabled" : "Light Theme enabled", isOn: $isDarkMode)
+                
+                    // from demo
+                    Text("iOS appearance: " + (colorScheme == .dark ? "dark mode" : "light mode"))
+                        .padding(32)
+                }
+                .preferredColorScheme(isDarkMode ? .dark : .light)
+                
+                Section(header: Text("Title On/Off")) {
+                    Toggle("View", isOn: $titleOn)
+                    
+                    Text(titleOn ? "Navigation title enabled" : "")
+                        .padding()
+                    
                 }
                 
                 Section(header: Text("2 section")) {
@@ -36,8 +54,10 @@ struct SettingsView: View {
         }
         
     }
+    
+        
 }
 
 #Preview {
-    SettingsView()
+    SettingsView(titleOn: .constant(true))
 }
