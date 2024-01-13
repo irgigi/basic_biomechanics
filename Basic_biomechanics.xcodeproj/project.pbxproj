@@ -15,8 +15,9 @@
 		863DB0C12B42BA660099300C /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863DB0C02B42BA660099300C /* InfoView.swift */; };
 		863DB0C32B42E1290099300C /* InfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863DB0C22B42E1290099300C /* InfoRow.swift */; };
 		863DB0C52B42E6350099300C /* InfoDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863DB0C42B42E6350099300C /* InfoDetails.swift */; };
-		863DB0CA2B430C910099300C /* HelloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863DB0C92B430C910099300C /* HelloView.swift */; };
+		863DB0CA2B430C910099300C /* QuizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863DB0C92B430C910099300C /* QuizeView.swift */; };
 		863DB0CC2B430D5D0099300C /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863DB0CB2B430D5D0099300C /* SettingsView.swift */; };
+		869B230F2B52B2D900803572 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869B230E2B52B2D900803572 /* Question.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,8 +30,9 @@
 		863DB0C02B42BA660099300C /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		863DB0C22B42E1290099300C /* InfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRow.swift; sourceTree = "<group>"; };
 		863DB0C42B42E6350099300C /* InfoDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoDetails.swift; sourceTree = "<group>"; };
-		863DB0C92B430C910099300C /* HelloView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloView.swift; sourceTree = "<group>"; };
+		863DB0C92B430C910099300C /* QuizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizeView.swift; sourceTree = "<group>"; };
 		863DB0CB2B430D5D0099300C /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		869B230E2B52B2D900803572 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +106,8 @@
 		863DB0C72B430C0B0099300C /* SecondView */ = {
 			isa = PBXGroup;
 			children = (
-				863DB0C92B430C910099300C /* HelloView.swift */,
+				863DB0C92B430C910099300C /* QuizeView.swift */,
+				869B230E2B52B2D900803572 /* Question.swift */,
 			);
 			path = SecondView;
 			sourceTree = "<group>";
@@ -190,10 +193,11 @@
 				863DB0C12B42BA660099300C /* InfoView.swift in Sources */,
 				863DB0CC2B430D5D0099300C /* SettingsView.swift in Sources */,
 				863DB0BF2B42A3520099300C /* Post.swift in Sources */,
+				869B230F2B52B2D900803572 /* Question.swift in Sources */,
 				863DB0B22B42A2A10099300C /* ContentView.swift in Sources */,
 				863DB0B02B42A2A10099300C /* Basic_biomechanicsApp.swift in Sources */,
 				863DB0C52B42E6350099300C /* InfoDetails.swift in Sources */,
-				863DB0CA2B430C910099300C /* HelloView.swift in Sources */,
+				863DB0CA2B430C910099300C /* QuizeView.swift in Sources */,
 				863DB0C32B42E1290099300C /* InfoRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

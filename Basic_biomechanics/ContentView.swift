@@ -7,7 +7,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @Binding var titleOn: Bool
+    @AppStorage("titleOn") var titleOn = true
     
     var body: some View {
         
@@ -18,9 +18,9 @@ struct ContentView: View {
                     Label("Info", systemImage: "figure")
                 }
             
-            HelloView()
+            QuizeView()
                 .tabItem {
-                    Label("Hello", systemImage: "globe")
+                    Label("Quize", systemImage: "questionmark.app")
                 }
             
             SettingsView(titleOn: $titleOn)
@@ -34,5 +34,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView(titleOn: .constant(true))
+    ContentView()
 }
